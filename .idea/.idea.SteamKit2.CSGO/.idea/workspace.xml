@@ -5,35 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3482de6-8c6f-45cd-a496-3ca81b97ba4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SteamKit2.CSGO/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SteamKit2.Trader/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SteamKit2.Trader/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.SteamKit2.Trader/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.CSGO.Tests/SteamKit2.CSGO.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.CSGO.Tests/Tests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.CSGO.Tests/Usings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.CSGO.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Enums/Language.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Exceptions.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Exceptions.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Games/CSGO/CounterStrikeClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Managers/Entities/Enums/ActionType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Managers/Entities/MarketHistoryItemDescription.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Managers/Entities/MarketHistoryItemRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Managers/Entities/MarketHistoryPurchaseAssetRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Managers/Entities/MarketHistoryPurchaseRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Managers/Entities/MarketHistoryResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Managers/InventoryManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/Managers/MarketManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SteamKit2.Trader/SteamKit2.Trader.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SteamKit2.CSGO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SteamKit2.CSGO/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="REBASE" />
+      </set>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/173376b328f681e485888b162ac38ffbe97c8652f37c1824ca6af1c13724c/SteamMsgInventory.cs" root0="SKIP_HIGHLIGHTING" />
@@ -44,13 +31,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bc27ecdc38d564135438796bd5249a40826b78429e82d06a384c2b3c1af250/WaitHandle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c0a1ce52b9132797b8ac9c24a6405871e32dfaf0c13ae191ed65b3ab1c788648/ClientMsgHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c82eaf5765e64646715a3c218f4256ae213269f1f3f1dbc2afb837964a39a/SteamUnifiedMessages.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SteamKit2.Trader/Enums/Language.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SteamKit2.Trader/Exceptions.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SteamKit2.Trader/Exceptions.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SteamKit2.Trader/Games/CSGO/CounterStrikeClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SteamKit2.Trader/Managers/Entities/Enums/ActionType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SteamKit2.Trader/Managers/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SteamKit2.Trader/Managers/MarketManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -131,6 +111,42 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="70491ea6-2a00-46d2-b898-ac7e96629738">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="70491ea6-2a00-46d2-b898-ac7e96629738" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
