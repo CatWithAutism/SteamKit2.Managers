@@ -1,0 +1,30 @@
+actions = {List<CEconItem_Action>} Count = 0
+appid = {int} 730
+background_color = {string} ""
+classid = {ulong} 5272908327
+commodity = {bool} true
+contained_item = {CEconItem_Description} null
+currency = {bool} false
+descriptions = {List<CEconItem_DescriptionLine>} Count = 24
+fraudwarnings = {List<string>} Count = 0
+icon_url = {string} "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFUynfWaI25G6Ijkl9iPw_SnNrjXw2oBu8cj3b2Qo4_33QbnrUdlYD37ddCLMlhpvs0XIz0"
+icon_url_large = {string} ""
+instanceid = {ulong} 0
+item_expiration = {string} ""
+market_actions = {List<CEconItem_Action>} Count = 0
+market_buy_country_restriction = {string} "FR"
+market_fee = {string} ""
+market_fee_app = {int} 0
+market_hash_name = {string} "Prisma Case"
+market_marketable_restriction = {int} 0
+market_name = {string} "Кейс «Призма»"
+market_sell_country_restriction = {string} ""
+market_tradable_restriction = {int} 7
+marketable = {bool} true
+name = {string} "Кейс «Призма»"
+name_color = {string} "D2D2D2"
+owner_actions = {List<CEconItem_Action>} Count = 0
+owner_descriptions = {List<CEconItem_DescriptionLine>} Count = 2
+tags = {List<CEconItem_Tag>} Count = 4
+tradable = {bool} false
+type = {string} "Контейнер, базового класса"
