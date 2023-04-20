@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamKit2.Managers", "SteamKit2.Managers\SteamKit2.Managers.csproj", "{5D3D3202-4FC7-4BC3-AF22-71852625F8D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamKit2.Trader.Tests", "SteamKit2.Trader.Tests\SteamKit2.Trader.Tests.csproj", "{1EEB0968-9FA6-405C-9658-F6282C3542BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamKit2.Managers.Tests", "SteamKit2.Managers.Tests\SteamKit2.Managers.Tests.csproj", "{1EEB0968-9FA6-405C-9658-F6282C3542BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

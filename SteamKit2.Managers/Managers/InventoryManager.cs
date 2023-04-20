@@ -6,42 +6,32 @@ namespace SteamKit2.Managers.Managers;
 
 public class InventoryManager
 {
-    private static readonly List<uint> _econGames = new()
+    protected SteamClient SteamSteamClient { get; }
+    protected SteamUnifiedMessages SteamMessages { get; }
+    protected SteamUnifiedMessages.UnifiedService<IEcon> EconService { get; }
+
+    public InventoryManager(SteamClient steamClient)
     {
-        730, 570, 440
-    };
-    
-    protected readonly SteamClient _steamClient;
-    protected readonly SteamUnifiedMessages _steamUnifiedMessages;
-    protected readonly SteamUnifiedMessages.UnifiedService<IEcon> _econService;
-    
-    public InventoryManager(SteamClient client)
-    {
-        ArgumentNullException.ThrowIfNull(client);
-        if (!client.IsConnected)
+        if (!steamClient.IsConnected || steamClient.SteamID == null)
         {
             throw new ArgumentException("Your steam client should be connected.");
         }
 
-        _steamClient = client;
-        _steamUnifiedMessages = _steamClient.GetHandler<SteamUnifiedMessages>();
-        _econService = _steamUnifiedMessages.CreateService<IEcon>();
+        SteamSteamClient = steamClient;
+        SteamMessages = SteamSteamClient.GetHandler<SteamUnifiedMessages>() ?? throw new InvalidOperationException(nameof(SteamUnifiedMessages));
+        EconService = SteamMessages.CreateService<IEcon>();
     }
 
     /// <summary>
-    ///     Request inventory items via IEcon system(works only with Dota, CS, TF2)
+    ///     Request inventory items via IEcon system
     /// </summary>
-    /// <param name="appId">Id of your game</param>
-    /// <param name="count">Count of requested items</param>
-    /// <param name="needDescription">Do you need description for each item?</param>
-    /// <param name="language">Language</param>
     public async Task<InventoryResponse> GetInventory(InventoryRequest inventoryRequest)
     {
         ArgumentNullException.ThrowIfNull(inventoryRequest, nameof(inventoryRequest));
         
         var steamKitRequest = new CEcon_GetInventoryItemsWithDescriptions_Request
         {
-            steamid = _steamClient.SteamID.ConvertToUInt64(),
+            steamid = SteamSteamClient.SteamID!.ConvertToUInt64(),
             appid = inventoryRequest.AppId,
             get_descriptions = inventoryRequest.NeedDescription,
             contextid = inventoryRequest.ContextId,
@@ -56,7 +46,7 @@ public class InventoryManager
             }
         };
         
-        var rawResponse = await _econService.SendMessage(inventory => inventory.GetInventoryItemsWithDescriptions(steamKitRequest));
+        var rawResponse = await EconService.SendMessage(inventory => inventory.GetInventoryItemsWithDescriptions(steamKitRequest));
         var response = rawResponse.GetDeserializedResponse<CEcon_GetInventoryItemsWithDescriptions_Response>();
         var inventoryResponse = new InventoryResponse(response);
         

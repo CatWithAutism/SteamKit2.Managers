@@ -21,7 +21,7 @@ public class InventoryResponse
         InventoryItems = mappedData.Select(t => new InventoryItem(t.Asset, t.DescriptionAsset)).ToList();
     }
     
-    public List<InventoryItem> InventoryItems { get; set; }
+    public List<InventoryItem>? InventoryItems { get; set; }
     public uint TotalInventoryCount { get; set; }
     public bool MoreItems { get; set; }
 }
