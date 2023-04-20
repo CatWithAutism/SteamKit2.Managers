@@ -1,1 +1,1 @@
-# SteamKit2-Trader
+# SteamKit2.Managers
