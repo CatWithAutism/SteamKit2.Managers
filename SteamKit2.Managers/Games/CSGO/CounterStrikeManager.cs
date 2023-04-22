@@ -32,12 +32,17 @@ public class CounterStrikeClient
             throw new ArgumentNullException(nameof(userNonce));
         }
 
-        InventoryManager = CounterStrikeInventoryManager.GetCounterStrikeInventoryManager(client);
+        InventoryManager = new CounterStrikeInventoryManager(client);
     }
 
 
     public async Task<InventoryResponse> GetInventory(InventoryRequest inventoryRequest)
     {
         return await InventoryManager.GetInventory(inventoryRequest);
+    }
+
+    public async Task<InventoryResponse> GetStorageUnitItems(uint storageUnitId)
+    {
+        return await InventoryManager.GetStorageUnitItems();
     }
 }

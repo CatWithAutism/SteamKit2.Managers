@@ -6,7 +6,7 @@ namespace SteamKit2.Managers.Managers;
 
 public class InventoryManager
 {
-    protected SteamClient SteamSteamClient { get; }
+    protected SteamClient SteamClient { get; }
     protected SteamUnifiedMessages SteamMessages { get; }
     protected SteamUnifiedMessages.UnifiedService<IEcon> EconService { get; }
 
@@ -17,8 +17,8 @@ public class InventoryManager
             throw new ArgumentException("Your steam client should be connected.");
         }
 
-        SteamSteamClient = steamClient;
-        SteamMessages = SteamSteamClient.GetHandler<SteamUnifiedMessages>() ?? throw new InvalidOperationException(nameof(SteamUnifiedMessages));
+        SteamClient = steamClient;
+        SteamMessages = SteamClient.GetHandler<SteamUnifiedMessages>() ?? throw new InvalidOperationException(nameof(SteamUnifiedMessages));
         EconService = SteamMessages.CreateService<IEcon>();
     }
 
@@ -31,7 +31,7 @@ public class InventoryManager
         
         var steamKitRequest = new CEcon_GetInventoryItemsWithDescriptions_Request
         {
-            steamid = SteamSteamClient.SteamID!.ConvertToUInt64(),
+            steamid = SteamClient.SteamID!.ConvertToUInt64(),
             appid = inventoryRequest.AppId,
             get_descriptions = inventoryRequest.NeedDescription,
             contextid = inventoryRequest.ContextId,

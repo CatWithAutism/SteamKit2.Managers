@@ -1,43 +1,53 @@
+using SteamKit2.GC;
+using SteamKit2.GC.CSGO.Internal;
+using SteamKit2.Managers.Managers.Entities.Inventory;
+
 namespace SteamKit2.Managers.Managers.Games;
 
-internal class CounterStrikeInventoryManager : InventoryManager, IDisposable
+internal class CounterStrikeInventoryManager : InventoryManager
 {
-    private CounterStrikeInventoryManager(SteamClient steamClient) : base(steamClient)
+    private const int CounterStrikeAppId = 730;
+
+    public CounterStrikeInventoryManager(SteamClient steamClient) : base(steamClient)
     {
-        GameCoordinator = SteamSteamClient.GetHandler<SteamGameCoordinator>() ??
+        GameCoordinator = SteamClient.GetHandler<SteamGameCoordinator>() ??
                           throw new InvalidOperationException(nameof(SteamGameCoordinator));
     }
 
-    private static Dictionary<ulong, CounterStrikeInventoryManager> InstanceManager { get; } = new();
-    private SteamGameCoordinator GameCoordinator { get; set; }
-
-    internal static CounterStrikeInventoryManager GetCounterStrikeInventoryManager(SteamClient steamClient)
+    public CounterStrikeInventoryManager(SteamClient steamClient, SteamGameCoordinator gameCoordinator) :
+        base(steamClient)
     {
-        if (!steamClient.IsConnected || steamClient.SteamID == null)
-        {
-            throw new ArgumentException("Your steam client should be connected.");
-        }
-        
-        if (InstanceManager.TryGetValue(steamClient.SteamID.ConvertToUInt64(), out var cachedManager))
-            return cachedManager;
-
-        var inventoryManager = new CounterStrikeInventoryManager(steamClient);
-        InstanceManager.Add(steamClient.SteamID.ConvertToUInt64(), inventoryManager);
-
-        return inventoryManager;
+        GameCoordinator = gameCoordinator;
+        CallbackManager = new CallbackManager(steamClient);
+        SubscribeToEvents();
     }
 
-
-    public void GetStorageUnitItems()
+    public CounterStrikeInventoryManager(SteamClient steamClient, SteamGameCoordinator gameCoordinator,
+        CallbackManager callbackManager) : base(steamClient)
     {
-        
+        GameCoordinator = gameCoordinator;
+        CallbackManager = callbackManager;
+        SubscribeToEvents();
     }
 
-    /// <summary>
-    /// Remove instance from instance manager.
-    /// </summary>
-    public void Dispose()
+    public CallbackManager CallbackManager { get; }
+
+    private SteamGameCoordinator GameCoordinator { get; }
+
+    public Task<InventoryResponse> GetStorageUnitItems()
     {
-        InstanceManager.Remove(SteamSteamClient.SteamID!.ConvertToUInt64());
+        var clientMsgProtobuf = new ClientGCMsgProtobuf<CMsgCasketItem>((uint)EGCItemMsg.k_EMsgGCCasketItemAdd);
+        GameCoordinator.Send(clientMsgProtobuf, CounterStrikeAppId);
+        throw new NotImplementedException();
+    }
+
+    private void OnGcMessage(SteamGameCoordinator.MessageCallback callback)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void SubscribeToEvents()
+    {
+        CallbackManager.Subscribe<SteamGameCoordinator.MessageCallback>(OnGcMessage);
     }
 }
