@@ -1,8 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamKit2.Managers", "SteamKit2.Managers\SteamKit2.Managers.csproj", "{5D3D3202-4FC7-4BC3-AF22-71852625F8D3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{96C98ADE-5A48-409B-A3F0-977F3726C687}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamKit2.Managers.Tests", "SteamKit2.Managers.Tests\SteamKit2.Managers.Tests.csproj", "{1EEB0968-9FA6-405C-9658-F6282C3542BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamKit2.Managers", "src\SteamKit2.Managers\SteamKit2.Managers.csproj", "{52717D97-22A9-4415-B2F8-8929AE72E6E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{14345B23-2ED5-409B-86D0-B6A5F4F2B994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamKit2.Managers.Tests", "tests\SteamKit2.Managers.Tests\SteamKit2.Managers.Tests.csproj", "{2D467212-0D97-4F70-BC1A-B03473636BCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +14,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5D3D3202-4FC7-4BC3-AF22-71852625F8D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D3D3202-4FC7-4BC3-AF22-71852625F8D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D3D3202-4FC7-4BC3-AF22-71852625F8D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D3D3202-4FC7-4BC3-AF22-71852625F8D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1EEB0968-9FA6-405C-9658-F6282C3542BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1EEB0968-9FA6-405C-9658-F6282C3542BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1EEB0968-9FA6-405C-9658-F6282C3542BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1EEB0968-9FA6-405C-9658-F6282C3542BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52717D97-22A9-4415-B2F8-8929AE72E6E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52717D97-22A9-4415-B2F8-8929AE72E6E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52717D97-22A9-4415-B2F8-8929AE72E6E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52717D97-22A9-4415-B2F8-8929AE72E6E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D467212-0D97-4F70-BC1A-B03473636BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D467212-0D97-4F70-BC1A-B03473636BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D467212-0D97-4F70-BC1A-B03473636BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D467212-0D97-4F70-BC1A-B03473636BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52717D97-22A9-4415-B2F8-8929AE72E6E5} = {96C98ADE-5A48-409B-A3F0-977F3726C687}
+		{2D467212-0D97-4F70-BC1A-B03473636BCE} = {14345B23-2ED5-409B-86D0-B6A5F4F2B994}
 	EndGlobalSection
 EndGlobal

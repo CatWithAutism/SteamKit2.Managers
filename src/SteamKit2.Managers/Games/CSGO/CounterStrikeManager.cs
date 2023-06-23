@@ -41,8 +41,8 @@ public class CounterStrikeClient
         return await InventoryManager.GetInventory(inventoryRequest);
     }
 
-    public async Task<InventoryResponse> GetStorageUnitItems(uint storageUnitId)
+    public InventoryResponse GetStorageUnitItems(uint storageUnitId)
     {
-        return await InventoryManager.GetStorageUnitItems();
+        return InventoryManager.GetStorageUnitItems();
     }
 }
